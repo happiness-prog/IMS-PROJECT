@@ -1,53 +1,48 @@
-# Inventory Management System
-
-A command-line application for managing inventory, suppliers, orders, and users.
-
+# IMS 
+This is a Python CLI application that uses SQLAlchemy for ORM to manage an inventory system. Users can interact with the database through commands to create, delete, view, and search products, suppliers, users, and orders. The system also includes reporting features.
 ## Features
+- Add,delete and view products ,suppliers an users
+- cerate and manage orders
+- generate reports 
+## setup
+1. clone the repo
+```bash
+git clone https://github.com/happiness-prog/IMS-PROJECT
+cd inventory_managment_system
+```
+2. install dependancies 
+```bash
+pip install
+pipenv shell
+```
+3. run the application 
+```bash 
+python main.py menu 
+```
 
-- **Product Management:** Add, edit, delete, and view products
-- **Supplier Management:** Add, edit, delete, and view suppliers
+## usage 
+1. add user 
+```bash 
+python main.py supplier add-supplier --name=''
+```
+2. add product 
+```bash 
+python main.py product add-product --name''
+```
+3. create an order 
+```bash 
+python main.py order create-order --user-id= ....
+```
+4. generate reports
+```bash 
+python main.py supplier generate-supplier-report
+```
 
-- **Stock Management:** Track stock levels and get restock alerts
-- **Reporting:** Generate reports on sales, inventory, and suppliers
+## dependancies
+- CLICK
+- SQLALCHEMY
+- ALEMBIC
 
-## Setup Instructions
-
-1. Create a virtual environment:
-   ``` bash 
-   pipenv shell
-   ```
-
-
-2. Run the application:
-   ```
-   python main.py
-   ```
-
-## Usage
-
-Follow the interactive menu prompts to navigate through the different features of the system:
-
-1. **Products:** Manage your product inventory
-2. **Suppliers:** Manage your suppliers
-3. **Orders:** Create and manage customer orders
-4. **Users:** Manage system users
-5. **Reports:** Generate various reports
-6. **Exit:** Quit the application
-
-## Models
-
-- **Product:** Represents inventory items with name, description, price, quantity, and related supplier
-- **Supplier:** Represents vendors who supply products
-- **Order:** Represents customer purchases
-- **OrderItem:** Individual items within an order
-- **User:** System users with different roles
-
-## Dependencies
-
-- click: Command line interface creation
-- SQLAlchemy: ORM for database management
-- tabulate: Formatted table output
-
-
-
-python main.py product-cli generate-stock-report
+## LICENSE 
+ MIT license.
+ 
